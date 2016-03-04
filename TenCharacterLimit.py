@@ -10,6 +10,7 @@ answer = raw_input("Would you like to add more text to the file? Type 'no' to ex
 
 while answer != "no":																				# when user is entering information and doesn't want to end the program 
 	inputFile = open("input.txt", "a")																# opens input file in append so information can be added
+	inputFile.write(answer + "\n")	
 	lengthAnswer = answer[:10]																		# reads first ten characters of the user's answer they typed in
 	outputFile.write(lengthAnswer + "\n")															# prints the ten characters in the out put file and adds an enter for the next line of text
 	answer = raw_input("Would you like to add more text to the file? Type 'no' to exit program. ")	# asks the user to enter more information, or to exit 
